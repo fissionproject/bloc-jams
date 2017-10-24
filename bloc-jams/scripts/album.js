@@ -71,6 +71,12 @@
         while (currentParent.className !== targetClass && currentParent.className !== null) {
             currentParent = currentParent.parentElement;
         }
+        if (currentParent !== currentParent.parentElement) {
+          console.log("No Parent Found");
+        }
+        else {
+          console.log("No parent found with that class name");
+        }
         return currentParent;
     }
 };
